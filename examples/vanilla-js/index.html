@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatify Test</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      #chat-container {
+        height: 500px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Chatify Core Library Test</h1>
+    <div id="chat-container"></div>
+
+    <script type="module">
+      import { Chatify } from "../../dist/index.js";
+
+      const chatContainer = document.getElementById("chat-container");
+
+      const testData = [
+        {
+          id: 1,
+          text: "안녕하세요!",
+          timestamp: "오후 2:00",
+          sender: { id: "user1", name: "Alice" },
+        },
+        {
+          id: 2,
+          text: "Chatify 테스트 중입니다.",
+          timestamp: "오후 2:01",
+          sender: { id: "user2", name: "Bob", avatar: "..." },
+        },
+      ];
+
+      // 인스턴스 생성
+      console.log("Creating Chatify instance...");
+      new Chatify(chatContainer, { data: testData });
+      console.log("Chatify instance created.");
+    </script>
+  </body>
+</html>

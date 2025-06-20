@@ -29,6 +29,8 @@ export class Chatify {
    * @throws {Error} If the container element is not found
    */
   constructor(container: HTMLElement, options: ChatifyOptions) {
+    console.log("Cahtify 실행됨");
+
     if (!container) {
       throw new Error("Chatify: Container element not found.");
     }
