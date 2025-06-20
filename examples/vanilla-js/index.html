@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../dist/core/styles/main.css" />
     <title>Chatify Test</title>
     <style>
       body {
@@ -24,6 +25,7 @@
 
       const chatContainer = document.getElementById("chat-container");
 
+      const CURRENT_USER_ID = "user2";
       const testData = [
         {
           id: 1,
@@ -41,7 +43,10 @@
 
       // 인스턴스 생성
       console.log("Creating Chatify instance...");
-      new Chatify(chatContainer, { data: testData });
+      new Chatify(chatContainer, {
+        data: testData,
+        currentUserId: CURRENT_USER_ID,
+      });
       console.log("Chatify instance created.");
     </script>
   </body>

@@ -2,7 +2,7 @@
   "compilerOptions": {
     "jsx": "react",
     "target": "ES2020",
-    "module": "ESNext",
+    "module": "NodeNext",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -11,7 +11,7 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "moduleResolution": "node"
+    "moduleResolution": "NodeNext"
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]

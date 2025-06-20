@@ -1,0 +1,42 @@
+/* src/core/styles/main.css */
+.chatify-messages-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 12px;
+}
+
+.chatify-message-bubble {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+  padding: 8px 12px;
+  border-radius: 18px;
+  font-size: 14px;
+}
+
+.chatify-message-bubble .sender-name {
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+/* 상대방 메시지 스타일 */
+.chatify-message-bubble.is-theirs {
+  background-color: #f1f3f5;
+  color: #000;
+  align-self: flex-start;
+  border-top-left-radius: 4px;
+}
+
+/* 내 메시지 스타일 */
+.chatify-message-bubble.is-mine {
+  background-color: #007bff;
+  color: #fff;
+  align-self: flex-end;
+  border-top-right-radius: 4px;
+}
+
+.chatify-message-bubble.is-mine .sender-name {
+  display: none;
+}
